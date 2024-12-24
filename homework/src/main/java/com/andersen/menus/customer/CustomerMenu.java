@@ -13,13 +13,14 @@ public class CustomerMenu implements IMenu {
     public void display() {
         int menuOption = 0;
         while (menuOption != 5) {
-            System.out.print("Customer Menu:\n" +
-                    "1. View available spaces\n" +
-                    "2. Make a reservation\n" +
-                    "3. View my reservations\n" +
-                    "4. Cancel reservation\n" +
-                    "5. Log out\n" +
-                    "> ");
+            System.out.print("""
+                    Customer Menu:\n
+                    1. View available spaces\n
+                    2. Make a reservation\n
+                    3. View my reservations\n
+                    4. Cancel reservation\n
+                    5. Log out\n
+                    > """);
             menuOption = ScannerService.scanner.nextInt();
             handleCustomerMenuOption(menuOption);
         }

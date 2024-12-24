@@ -9,6 +9,8 @@ public class UserSession {
     @Getter @Setter
     private User user;
 
+    private UserSession() {}
+
     public static UserSession getInstance() {
         if(instance == null) {
             instance = new UserSession();

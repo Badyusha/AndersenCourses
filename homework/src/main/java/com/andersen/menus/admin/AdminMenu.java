@@ -12,13 +12,14 @@ public class AdminMenu implements IMenu {
     public void display() {
         int menuOption = 0;
         while (menuOption != 5) {
-            System.out.print("Admin Menu:\n" +
-                    "1. Add a new coworking space\n" +
-                    "2. Remove coworking space\n" +
-                    "3. Update coworking space\n" +
-                    "4. View all reservations\n" +
-                    "5. Log out\n" +
-                    "> ");
+            System.out.print("""
+                    Admin Menu:
+                    1. Add a new coworking space
+                    2. Remove coworking space
+                    3. Update coworking space
+                    4. View all reservations
+                    5. Log out
+                    > """);
             menuOption = ScannerService.scanner.nextInt();
             handleAdminMenuOption(menuOption);
         }

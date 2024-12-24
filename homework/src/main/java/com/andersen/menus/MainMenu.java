@@ -16,11 +16,12 @@ public class MainMenu implements IMenu {
 
         int menuOption = 0;
         while (menuOption != 3) {
-            System.out.print("Choose menu option\n" +
-                    "1. Admin login\n" +
-                    "2. Customer login\n" +
-                    "3. Exit\n" +
-                    "> ");
+            System.out.println("""
+                    Choose menu option
+                    1. Admin login
+                    2. Customer login
+                    3. Exit
+                    > """);
 
             menuOption = ScannerService.scanner.nextInt();
             handleMainMenu(menuOption);
