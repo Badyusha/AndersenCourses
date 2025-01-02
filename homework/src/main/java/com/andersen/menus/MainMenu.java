@@ -1,5 +1,6 @@
 package com.andersen.menus;
 
+import com.andersen.exceptions.UserNotFound;
 import com.andersen.factories.UserSession;
 import com.andersen.entities.User;
 import com.andersen.enums.Role;
@@ -35,7 +36,7 @@ public class MainMenu implements IMenu {
                 User user = loginService.loginUser(Role.values()[menuOption - 1]);
                 if (user == null) {
                     System.out.println("Invalid username or password!");
-                    break;
+                    throw new UserNotFound("Invalid username or password!");
                 }
                 UserSession.getInstance().setUser(user);
                 MenuFactory.userMenu(user).display();
