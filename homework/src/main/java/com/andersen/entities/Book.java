@@ -1,11 +1,13 @@
 package com.andersen.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Data
+@AllArgsConstructor
 public class Book {
     private static int nextId = 1;
     private int id;
